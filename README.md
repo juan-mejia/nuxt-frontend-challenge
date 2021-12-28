@@ -20,8 +20,8 @@ Lo que evaluamos en el código:
 ## Herramientas
 - Nuxt.js, Puede usar este mismo repositorio con la base que le ofrecemos.
 - Utilice un gestor de estado.
-- Axios o Fetch queda a su preferencia.
-- Ayúdese del framework o librería UI de su preferencia, En talently usamos tailwind pero si desea usar css puro o algún preprocesador lo valoraremos aún más.
+- Axios ó Fetch queda a su preferencia.
+- Ayúdese del framework ó librería UI de su preferencia, En talently usamos tailwind pero si desea usar css puro o algún preprocesador lo valoraremos aún más.
 
 ## Desarrollo
 El miniproyecto tiene 3 vistas: lista de testimonios, formulario para agregar testimonio y detalle de testimonio.
@@ -42,9 +42,10 @@ Aquí el avatar tiene un preview de la url de la imagen.
 ![image](https://user-images.githubusercontent.com/29830848/147612020-558a10b6-2f1a-4341-b500-2633bbe31ef2.png)
 
 ## Bonus
-Agregar estas funcionalidades le va sumar puntos pero no son obligatorios
+Estos puntos pueden sumar puntos pero no son obligatorios
 - Animaciones
 - El proyecto es muy pequeño, pero si puede aplicar algún patrón de diseño sería genial.
+- Usar algun linter.
 - Eliminar testimonio, no está plasmado en el wireframe pero existe la api y desea agregarlo nos gustaría saber donde considera que debería ir.
 
 ## Entregable o Expectativa del reto
