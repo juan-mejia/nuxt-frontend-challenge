@@ -55,7 +55,6 @@ Estos puntos pueden sumar puntos pero no son obligatorios
 - Eliminar testimonio, no está plasmado en el wireframe pero existe la api y desea agregarlo nos gustaría saber donde considera que debería ir.
 
 ## Entregable o Expectativa del reto
-
-- El reto tiene una duración de 72hrs (3 días) desde el momento que se recibe
+- Se debe enviar la fecha de entrega a emmanuel.barturen@talently.tech
 - Al finalizar el reto, enviar el repositorio a emmanuel.barturen@talently.tech con copia a cristian@talently.tech y
-  dilver@talently.tech con título "Reto Frontend- Talently 2021-12"
+  dilver@talently.tech con título "Reto Frontend- Talently"
