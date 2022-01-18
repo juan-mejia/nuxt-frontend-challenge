@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'frontend-challenge',
+    title: 'Testimonials | Talently',
     htmlAttrs: {
       lang: 'en'
     },
