@@ -1,6 +1,6 @@
 <template>
-  <div v-if="show" class="absolute top-0 left-0 z-50 h-screen w-full flex justify-center items-center bg-white/50">
-      <slot></slot>
+  <div v-if="showModal" class="fixed top-0 left-0 z-50 h-screen w-full flex justify-center items-center bg-white/50">
+    <slot></slot>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ export default {
     props: ['show'],
     computed: {
         showModal(){
-            return this.open;
+            return this.show;
         }
     }
 }

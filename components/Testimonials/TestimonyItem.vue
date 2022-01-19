@@ -1,5 +1,6 @@
 <template>
-  <div class="group h-24 w-auto py-3 px-5 flex jusutify-center items-center bg-white hover:bg-primary-700 cursor-pointer rounded-md shadow">
+  <div class="group h-24 w-auto py-3 px-5 flex jusutify-center items-center bg-white hover:bg-primary-700 cursor-pointer rounded-md shadow"
+    @click="setTestimonialIdQuery">
       <div class="mr-3">
           <div class="h-16 w-16 rounded-full overflow-hidden shadow">
               <img
@@ -22,6 +23,11 @@
 export default {
     data(){
         return {
+        }
+    },
+    methods: {
+        setTestimonialIdQuery(){
+           this.$router.push('?testimonial_id=4');
         }
     }
 }
