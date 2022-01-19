@@ -2,7 +2,7 @@
     <div>
         <Navbar />
         <div class="app-bg">
-            <Nuxt class="pt-20 mx-auto max-w-6xl" />
+            <Nuxt class="pt-20 px-6 mx-auto max-w-6xl" />
         </div>
     </div>
 </template>

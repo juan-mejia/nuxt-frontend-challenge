@@ -1,6 +1,6 @@
 <template>
-  <header class="px-6  flex justify-between items-center">
-      <h2 class="text-2xl font-extrabold text-primary-700">Testimonials</h2>
+  <header class="flex justify-between items-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-primary-700">Testimonials</h2>
       <BaseButton text="New" />
   </header>
 </template>
