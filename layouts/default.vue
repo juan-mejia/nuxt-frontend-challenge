@@ -1,8 +1,8 @@
 <template>
     <div>
         <Navbar />
-        <div>
-            <Nuxt class="pt-14" />
+        <div class="app-bg">
+            <Nuxt class="pt-20 mx-auto max-w-6xl" />
         </div>
     </div>
 </template>
@@ -14,3 +14,8 @@ export default {
     }
 }
 </script>
+<style >
+.app-bg {
+    background: linear-gradient(179.84deg,#dbd9ff -82.46%,hsla(0,0%,100%,0) 103.84%);
+}
+</style>
