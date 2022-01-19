@@ -7,6 +7,7 @@
 
 <script>
 import BaseButton from '../UI/BaseButton.vue'
+
 export default {
     components: {
         BaseButton
