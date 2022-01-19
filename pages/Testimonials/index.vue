@@ -1,7 +1,7 @@
 <template>
   <div class="testimonials-page min-h-screen">
       <TestimonialsHeader />
-      <TestimonyList />
+      <TestimonyList :testimonials="testimonials" />
       <TestimonyDetailModal />
   </div>
 </template>
@@ -9,12 +9,17 @@
 <script>
 import TestimonialsHeader from '../../components/Testimonials/TestimonialsHeader.vue'
 import TestimonyList from '../../components/Testimonials/TestimonyList.vue'
-import c from '../../components/Testimonials/TestimonyDetailModal.vue'
+import TestimonyDetailModal from '../../components/Testimonials/TestimonyDetailModal.vue'
 export default {
     components: {
-        TestimonialDetailModal,
+        TestimonyDetailModal,
         TestimonialsHeader,
         TestimonyList,
+    },
+    computed: {
+        testimonials: function(){
+            return this.$store.state.users.users
+        }
     }
 }
 </script>

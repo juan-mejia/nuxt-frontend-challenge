@@ -1,5 +1,5 @@
 <template>
-  <form action="" class="flex flex-col">
+  <form action="" class="flex flex-cols">
     <div class="my-2">
         <div class="h-24 w-24 rounded-full shadow overflow-hidden border-4 border-primary-700">
             <img
