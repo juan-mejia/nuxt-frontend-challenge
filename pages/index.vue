@@ -1,11 +1,14 @@
 <template>
-  <Tutorial/>
 </template>
-
 <script>
 export default {
-  mounted(){
-    console.log(this.$store);
+  middleware({ route, redirect, from }) {
+    if(route.path == "/"){
+     return redirect("/testimonials")
+    }
+
   }
 }
 </script>
+<style>
+</style>
