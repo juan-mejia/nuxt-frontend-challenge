@@ -27,7 +27,7 @@ export default {
         formBody.push(encodedKey + "=" + encodedValue);
       }
       formBody = formBody.join("&");
-      this.$axios.$post('https://api-challenge-talently.vercel.app/api/users/add', formBody, {
+      this.$axios.$post('/api/users/add', formBody, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }

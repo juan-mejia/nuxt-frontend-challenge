@@ -31,7 +31,7 @@ export default {
         formBody.push(encodedKey + "=" + encodedValue);
       }
       formBody = formBody.join("&");
-      this.$axios.$post('https://api-challenge-talently.vercel.app/api/users/add', formBody, {
+      this.$axios.$post('/api/users/add', formBody, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
@@ -39,7 +39,6 @@ export default {
         .then(response => {
           this.$store.dispatch('users/fetchUsers');
           this.$router.push('/testimonials');
-          console.log(response);
         })
         .catch(error => {
           if(error.response.data.errors.length > 0){
@@ -51,7 +50,7 @@ export default {
     },
     async deleteUser(){
           this.feedback = ""
-          await this.$axios.$delete(`https://api-challenge-talently.vercel.app/api/users/delete/${this.testimony.id}`)
+          await this.$axios.$delete(`/api/users/delete/${this.testimony.id}`)
             .then(response => {
                 this.$store.dispatch('users/fetchUsers');
                 this.removeTestimonyIdQuery();

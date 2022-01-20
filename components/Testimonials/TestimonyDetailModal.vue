@@ -9,11 +9,11 @@
                     :src="user.avatar" alt="">
             </div>
         </div>
-        <div class="my-2 absolute right-0 top-0" @click="editUser">
-            <div class="h-5 w-5 rounded-full shadow overflow-hidden border-4 border-primary-700">
+        <div class="my-2 absolute right-4 top-1 rounded-full cursor-pointer" style="border-color: rgb(47,195,98)" @click="editUser">
+            <div class="h-10 w-10 p-1 rounded-full overflow-hidden">
                 <img
                     class="group-hover:hidden"
-                    :src="user.avatar" alt="">
+                    src="~/assets/icons/edit.svg" alt="">
             </div>
         </div>
         <div class="mt-10 text-center">
@@ -21,7 +21,7 @@
             <p class="text text-gray-400">{{user.profession}}</p>
         </div>
         <div class="my-2">
-            <div class="h-10 w-10 flex justify-center items-center rounded-full shadow overflow-hidden">
+            <div class="h-12 w-12 p-1 flex justify-center items-center rounded-full shadow-inner overflow-hidden">
                 <img
                     :src="user.company_logo" alt="">
             </div>
@@ -37,7 +37,7 @@
         </div>
         <p v-if="feedback" class="mt-3 mb-5 text-sm text-center text-red-600">{{feedback}}</p>
         <div class="mt-3 flex flex-col sm:flex-row-reverse gap-5">
-            <BaseButton text="Cerrar" @click.native="removeTestimonialIdQuery" />
+            <BaseButton text="Cerrar" @click.native="removeTestimonyIdQuery" />
             <BaseButton text="Eliminar" danger="true" @click.native="deleteUser" />
         </div>
     </div>
@@ -60,14 +60,14 @@ export default {
       }
   },
   methods: {
-      removeTestimonialIdQuery(){
+      removeTestimonyIdQuery(){
           this.$router.replace({'testimonial_id': null});
           this.user = '';
       },
       loadUser(){
         this.feedback = ""
         let user = this.$store.getters['users/getUserById'](this.$route.query.testimony_id);
-        this.$axios.$get(`https://api-challenge-talently.vercel.app/api/users/${this.$route.query.testimony_id}`)
+        this.$axios.$get(`/api/users/${this.$route.query.testimony_id}`)
             .then(response => {
                 this.user =  {
                     ...user,
@@ -80,7 +80,7 @@ export default {
       },
       deleteUser(){
           this.feedback = "";
-          this.$axios.$delete(`https://api-challenge-talently.vercel.app/api/users/delete/${this.user.id}`)
+          this.$axios.$delete(`/api/users/delete/${this.user.id}`)
             .then(response => {
                 this.$store.dispatch('users/fetchUsers');
                 this.removeTestimonyIdQuery();

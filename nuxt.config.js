@@ -41,6 +41,7 @@ export default {
   ],
   axios: {
     // proxy: true
+    baseURL: 'https://api-challenge-talently.vercel.app'
   },
   buildModules: ['@nuxtjs/tailwindcss'],
   // Build Configuration: https://go.nuxtjs.dev/config-build

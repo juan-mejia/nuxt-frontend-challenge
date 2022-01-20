@@ -218,7 +218,7 @@ module.exports = {
       lg: '0 0px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
       xl: '0 0px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
       '2xl': '0 0px 50px -12px rgb(0 0 0 / 0.25)',
-      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+      inner: 'inset 0 0px 4px 0 rgb(0 0 0 / 0.3)',
       none: 'none',
     },
     boxShadowColor: ({ theme }) => theme('colors'),

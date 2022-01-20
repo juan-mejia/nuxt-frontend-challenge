@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed w-full">
+  <nav class="fixed w-full z-50">
       <transition name="faderight">
           <nuxt-link v-if="showBackButton" to="/testimonials" class="absolute block z-10 top-4 left-5">
                 <img src="~assets/icons/left-arrow.png" class="h-6" alt="">
