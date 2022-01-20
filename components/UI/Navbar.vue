@@ -23,6 +23,13 @@ export default {
             showBackButton: false
         }
     },
+    created(){
+        if(this.$route.path != '/testimonials'){
+            this.showBackButton = true;
+        } else {
+            this.showBackButton = false;
+        }
+    },
     mounted(){
         let navbar = document.querySelector('nav .navbar');
         window.onscroll = function() {
