@@ -7,8 +7,8 @@
           </div>
       </div>
       <div v-if="testimony" class="w-full">
-          <span class="font-bold text-primary-700 group-hover:text-white">{{completeName == '' ? 'Nombre' : completeName}}</span>
-          <p class="text-sm text-gray-600 group-hover:text-white">{{testimony.profession ? testimony.profession : 'Profesion'}}</p>
+          <span class="font-bold text-primary-700 group-hover:text-white">{{completeName == '' ? 'Name' : completeName}}</span>
+          <p class="text-sm text-gray-600 group-hover:text-white">{{testimony.profession ? testimony.profession : 'Profession'}}</p>
       </div>
       <div v-else class="w-full">
           <span class="font-bold text-primary-700 group-hover:text-white">{{ 'Nombre'}}</span>

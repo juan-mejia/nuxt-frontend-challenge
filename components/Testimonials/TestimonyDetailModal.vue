@@ -12,6 +12,12 @@
             <span class="mb-8 text-xl font-bold">{{user.name}}</span>
             <p class="text text-gray-400">{{user.profession}}</p>
         </div>
+        <div class="my-2">
+            <div class="h-10 w-10 flex justify-center items-center rounded-full shadow overflow-hidden">
+                <img
+                    :src="user.company_logo" alt="">
+            </div>
+        </div>
         <div class="my-5 text-center">
             <!-- <span class="font-bold">Testimony</span> -->
             <p class="text-gray-500">{{user.testimony}}</p>
@@ -54,6 +60,7 @@ export default {
         this.user = this.$store.getters['users/getUserById'](this.$route.query.testimonial_id);
         this.$axios.$get(`https://api-challenge-talently.vercel.app/api/users/${this.$route.query.testimonial_id}`)
             .then(response => {;
+            console.log(this.user)
                 this.user =  {
                     ...this.user,
                     testimony: response.result.testimony
@@ -67,6 +74,8 @@ export default {
           this.feedback = ""
           this.$axios.$delete(`https://api-challenge-talently.vercel.app/api/users/delete/${this.user.id}`)
             .then(response => {
+                this.$store.dispatch('users/fetchUsers');
+                this.removeTestimonialIdQuery();
                 console.log(response)
             })
             .catch(error => {

@@ -3,7 +3,7 @@
         <span class="font-bold text-gray-500">{{label}}</span>
         <input 
             type="text" 
-            class="mt-1 rounded placeholder-gray-500 border-gray-500"
+            class="mt-1 rounded-md placeholder-gray-500 border-gray-500"
             :id="id" 
             :placeholder="placeholder" 
             :value="value"
