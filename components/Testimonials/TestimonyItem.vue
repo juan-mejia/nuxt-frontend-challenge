@@ -1,6 +1,6 @@
 <template>
   <div class="group h-24 w-full py-3 px-5 flex jusutify-center items-center bg-white hover:bg-primary-700 cursor-pointer rounded-md shadow"
-    @click="setTestimonialIdQuery">
+    @click="setTestimonyIdQuery">
       <div class="mr-3">
           <div class="h-16 w-16 rounded-full overflow-hidden shadow">
               <img :src="testimony.avatar ? testimony.avatar : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjYmlp9JDeNMaFZzw9S3G1dVztGqF_2vq9nA&usqp=CAU' " alt="">
@@ -23,8 +23,8 @@ export default {
   props: ['testimony'],
   mounted(){},
   methods: {
-      setTestimonialIdQuery(){
-          this.$router.push(`?testimonial_id=${this.testimony.id}`);
+      setTestimonyIdQuery(){
+          this.$router.push(`?testimony_id=${this.testimony.id}`);
       }
   },
   computed: {

@@ -11,6 +11,7 @@ import TestimonialsHeader from '../../components/Testimonials/TestimonialsHeader
 import TestimonyList from '../../components/Testimonials/TestimonyList.vue'
 import TestimonyDetailModal from '../../components/Testimonials/TestimonyDetailModal.vue'
 export default {
+    transition: 'fadeleft',
     components: {
         TestimonyDetailModal,
         TestimonialsHeader,

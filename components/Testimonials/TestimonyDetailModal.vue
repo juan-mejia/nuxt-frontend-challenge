@@ -1,8 +1,16 @@
 <template>
   <Modal :show="showModal">
+    <transition name="fadeup">
     <div v-if="user" class="relative w-11/12 max-w-sm py-8 px-8 flex flex-col items-center rounded-lg bg-white shadow-md border-4 border-primary-700">
         <div class="my-2 absolute -translate-y-24">
             <div class="h-28 w-28 rounded-full shadow overflow-hidden border-4 border-primary-700">
+                <img
+                    class="group-hover:hidden"
+                    :src="user.avatar" alt="">
+            </div>
+        </div>
+        <div class="my-2 absolute right-0 top-0" @click="editUser">
+            <div class="h-5 w-5 rounded-full shadow overflow-hidden border-4 border-primary-700">
                 <img
                     class="group-hover:hidden"
                     :src="user.avatar" alt="">
@@ -33,6 +41,7 @@
             <BaseButton text="Eliminar" danger="true" @click.native="deleteUser" />
         </div>
     </div>
+    </transition>
   </Modal>
 </template>
 
@@ -57,12 +66,11 @@ export default {
       },
       loadUser(){
         this.feedback = ""
-        this.user = this.$store.getters['users/getUserById'](this.$route.query.testimonial_id);
-        this.$axios.$get(`https://api-challenge-talently.vercel.app/api/users/${this.$route.query.testimonial_id}`)
-            .then(response => {;
-            console.log(this.user)
+        let user = this.$store.getters['users/getUserById'](this.$route.query.testimony_id);
+        this.$axios.$get(`https://api-challenge-talently.vercel.app/api/users/${this.$route.query.testimony_id}`)
+            .then(response => {
                 this.user =  {
-                    ...this.user,
+                    ...user,
                     testimony: response.result.testimony
                 };
             })
@@ -71,22 +79,25 @@ export default {
             })
       },
       deleteUser(){
-          this.feedback = ""
+          this.feedback = "";
           this.$axios.$delete(`https://api-challenge-talently.vercel.app/api/users/delete/${this.user.id}`)
             .then(response => {
                 this.$store.dispatch('users/fetchUsers');
-                this.removeTestimonialIdQuery();
-                console.log(response)
+                this.removeTestimonyIdQuery();
             })
             .catch(error => {
                 this.feedback = "Hubo un error al hacer la solicitud"
             })
+      },
+      editUser(){
+          this.$router.push({name: 'testimonials-edit', params: {testimony: this.user}})
       }
   },
   computed: {
       showModal: function(){
           let show = false;
-          if(this.$route.query.testimonial_id){
+          let user = this.$store.getters['users/getUserById'](this.$route.query.testimony_id);
+          if(user){
             this.loadUser();
             show = true;
           }
