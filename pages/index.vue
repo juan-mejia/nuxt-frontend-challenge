@@ -4,7 +4,7 @@
 export default {
   middleware({ route, redirect, from }) {
     if(route.path == "/"){
-     return redirect("/testimonials")
+     return redirect("/testimonials");
     }
 
   }

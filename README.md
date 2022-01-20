@@ -58,3 +58,49 @@ Estos puntos pueden sumar puntos pero no son obligatorios
 - Se debe enviar la fecha de entrega a emmanuel.barturen@talently.tech
 - Al finalizar el reto, enviar el repositorio a emmanuel.barturen@talently.tech con copia a cristian@talently.tech y
   dilver@talently.tech con título "Reto Frontend- Talently"
+
+
+# Talently Testimonials
+
+Talently Testimonials es una plataforma para poder ver, crear, eliminar y actualizar los testimonios de personas que han sido parte del proyecto Talently.
+
+## Tecnologías
+
+- Nuxt.js
+- Tailwind CSS
+- Axios
+
+## Instalación
+
+`$ npm install`
+
+### Modo desarrollo
+
+`$ npm run dev`
+
+### Compilar para producción
+
+`$ npm run build`
+
+### Iniciar modo SSR
+
+`$ npm run start`
+
+## Estructura de las carpetas
+
+- assets: En esta carpeta se encuentran los archivos estaticos procesador por Webpack.
+- components: Aquí se encuentran los compoenentes reutilizables de la aplicación.
+- layouts: La estructura principal de las páginas se encuentran aquí.
+- pages: En esta carpeta estñan las páginas principales. Los archivos y carpetas son utilizados por Nuxt para crear automáticamente las rutas y la configuración del Router.
+- plugins: En esta carpeta están los plugins y funcionalidades extras que se inyectan dentro de la aplicación.
+- static: En esta carpeta se encuentran los archivos estaticos sin procesar.
+- store: Aquí se encuentra el gestor de estados de la aplicación. 
+
+
+## Cómo contribuir
+
+Puedes crear un pull request al proyecto
+
+## Licencia
+
+MIT
