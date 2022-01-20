@@ -12,7 +12,7 @@
         <div class="my-2 absolute right-4 top-1 rounded-full cursor-pointer" style="border-color: rgb(47,195,98)" @click="editUser">
             <div class="h-10 w-10 p-1 rounded-full overflow-hidden">
                 <img
-                    class="group-hover:hidden"
+                    class=""
                     src="~/assets/icons/edit.svg" alt="">
             </div>
         </div>
